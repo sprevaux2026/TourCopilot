@@ -1,4 +1,4 @@
-// App.jsx
+// src/App.jsx
 
 import { useState, useEffect } from "react";
 import Gallery from "./components/Gallery";
@@ -14,7 +14,7 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     try {
-      const response = await fetch("https://course-api.com/react-tours-project");
+      const response = await fetch("/api/react-tours-project");
       const data = await response.json();
       setTours(data);
       setLoading(false);
